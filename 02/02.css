@@ -1,0 +1,30 @@
+#board
+{
+    float: left;
+    width: 400px;
+    border: 1px black solid;
+}
+/*#board .line
+{
+    float: left;
+    padding: 0;
+    margin: 0;
+}*/
+.line .color
+{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.white
+{
+    background-color: white;
+}
+.black
+{
+    background-color: black;
+}
+.red
+{
+    background-color: red;
+}
