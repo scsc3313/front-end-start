@@ -8,12 +8,15 @@ function setColor(line, color) {
 var board = getDom("board");  //체스판 만들기
 
 //칸들 지정해주기
-var line = createDom("span");
-line.setAttribute("class", "line");
-board.appendChild(line);
 
 //색 지정하기
 for(var i = 1; i <= 4; ++i) {
+
+
+  var line = createDom("span");
+  line.setAttribute("class", "line");
+  board.appendChild(line);
+
     for(var j = 1; j <= 4; ++j) {
         if((i+j)%2 === 0){
           setColor(line, "white");
@@ -24,11 +27,11 @@ for(var i = 1; i <= 4; ++i) {
 
 //클릭 이벤트 발생하게 하기
 var unClick = null;
-board.addEventListener("click", function(event) {
+document.getElementById("board").addEventListener("click", function(event) {
     //이벤트 타겟이 없으면 처음색으로 바꾼다.
     if(unClick !== null){
         var defaultColor = unClick.getAttribute("default");
-        unClick.setAttribute("class", "color "+defaultColor);
+        unClick.setAttribute("class", "color "+ defaultColor);
     }
     //클릭시 빨간색으로 변함
     event.target.setAttribute("class", "color red");
