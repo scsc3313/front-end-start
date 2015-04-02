@@ -13,7 +13,7 @@
 <ul>
   <% for(var i=0; i<list.length; i++) { %>
 		<li>	
-			<p><%= list[i].titleKo %></p>
+			<p><%= list[i].item.title %></p>
 			<p><img src="<%= list[i].photo.fullname %>" alt="" width="200px"></p>
 			<p>평균점수 :<%= list[i].moviePoint.expectPointAvg %></p>
 		</li>
