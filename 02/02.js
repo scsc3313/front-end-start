@@ -12,11 +12,10 @@ var board = getDom("board");  //체스판 만들기
 //색 지정하기
 for(var i = 1; i <= 4; ++i) {
 
-
   var line = createDom("span");
   line.setAttribute("class", "line");
   board.appendChild(line);
-
+  
     for(var j = 1; j <= 4; ++j) {
         if((i+j)%2 === 0){
           setColor(line, "white");
