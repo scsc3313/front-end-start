@@ -1,3 +1,5 @@
+// https://gist.github.com/132080/110d1b68d7328d7bfe7e36617f7df85679a08968
+//
 var getJSON = (function(){
   var unique = 0;
   return function(url, callback, context) {
@@ -23,11 +25,6 @@ var getJSON = (function(){
     document.getElementsByTagName('head')[0].appendChild(script);
   };
 })();
-
-
-function $(str){
-  return document.getElementById(str);
-}
 
 // Simple JavaScript Templating
 // John Resig - http://ejohn.org/ - MIT Licensed
@@ -65,3 +62,7 @@ function $(str){
     return data ? fn( data ) : fn;
   };
 })();
+
+function $(str){
+  return document.getElementById(str);
+}
