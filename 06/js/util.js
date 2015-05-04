@@ -1,5 +1,4 @@
-
-
+//실행할 function 정의하기
 function addTodo(event) {
 
   console.log('todoStringField keyup!');
@@ -16,11 +15,8 @@ function addTodo(event) {
 
 
   $field.val('');
-
+//key값은 현재 시간으로 정해줌!
   var id = new Date().getTime();
-
-
-console.log(id);
 
   var todo  = $.extend({}, Todo.model, {
     id: id,

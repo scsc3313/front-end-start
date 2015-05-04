@@ -1,16 +1,17 @@
 var todos = [ ];
 
-
+//TodoModel을 받기 위한 colletion 생성
 var collection = {
 
-
+  //collection에 todo 추가하기
   add: function(todo) {
 
     todos.push(todo);
 
-    $(document.body).trigger( "addCollection");
+    $(document.body).trigger( "addCollection"); //addCollection을 실행
 
   },
+  //collection에 있는 todo를 삭제하기
   remove: function(id){
 
     for(var i=0; i <todos.length; i++){
@@ -24,7 +25,8 @@ var collection = {
 
     }//end for
 
-    $(document.body).trigger( "removeCollection");
+    $(document.body).trigger( "removeCollection"); //removeCollection을 실행
+
 
   }
 

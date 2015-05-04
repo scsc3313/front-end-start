@@ -1,4 +1,4 @@
-//start...
+//todo 시작
 
 (function($, global){
 
@@ -6,15 +6,11 @@
   var $todoStringField = $('#todoString');
   var $listDom = $('#todoList');
 
-
-  // todoStringField.addEventListener('keyup', addTodo);
   $todoStringField.on('keyup', addTodo );
 
 
-  // //삭제버튼 이벤트 잡기 위해 상위에서 이벤트 listen 하기
+  //List를 클릭했을 경우 클래스가 delete이면 삭제!
   $listDom.on('click', '.delete', function(event){
-
-    console.log('delete')
 
     var $deleteBtn = $(event.target);
     var id = $deleteBtn.parent().data('id');
@@ -23,7 +19,7 @@
 
   });
 
-  // //처음 로딩시에 기존에 저장된 데이터 가져와서 보여주기
+  // 처음 켜질때 로드실행!
   todos = storage.load();
 
   view.render();
