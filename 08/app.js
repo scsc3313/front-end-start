@@ -39,7 +39,11 @@ $('#board').on('click', '.card', function(event){
 		{
 			card.addClass('success');
 			openCard.addClass('success');
-			
+
+			if($('.card.success').length == '10'){
+				alert("성 공!");
+			}
+
 		}
 
 		else{
