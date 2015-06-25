@@ -1,3 +1,4 @@
+//todoList에 Collection추가하기
 var $listDom = $('#todoList');
 var todoTemplateHtml = $('#todoTemplate').html();
 

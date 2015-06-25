@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>검색서비스</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>검색 서비스</h1>
+
+  <form  class="form-inline"  onsubmit="return false">
+    <div class="input-group">
+      <input id = 'searchBar' type="text" class="form-control" placeholder="검색어를 넣어주세요">
+      <div class="input-group-addon">
+        <button id="searchButton" type = "button" class="btnbtn-primary">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+
+  <ul id = 'list' class="nav nav-tabs" style="margin-top:30px">
+    <li id = "board" class="active" name="unactive"><a>게시판</a></li>
+    <li id = "vclip" class="unactive" name="unactive"><a>동영상</a></li>
+    <li id = "image" class="unactive" name="unactive"><a>이미지</a></li>
+    <li id = "knowledge" class="unactive" name="unactive"><a>팁</a></li>
+    <li id = "blog" class="unactive" name="unactive"><a>블로그</a></li>
+    <li id = "cafe" class="unactive" name="unactive"><a>카페</a></li>
+  </ul>
+
+  
+  <div id = "table" class="mov-panel" style="margin-top:30px" > </div>
+  <div id = "loading" align="center"></div>
+  <div id = "more" class="image"></div>
+  
+  <script type="text/template" id="listTemplate">
+  </script>
+  
+
+
+<script src = "util.js"></script>
+<script src = "search.js"></script>
+
+</body>
+</html>
